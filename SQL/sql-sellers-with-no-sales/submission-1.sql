@@ -1,0 +1,5 @@
+-- Write your query below
+select seller_name from seller where seller.seller_id not in (
+    select seller_id from orders
+WHERE orders.sale_date >= '2020-01-01' AND orders.sale_date <= '2020-12-31')
+order by seller_name
